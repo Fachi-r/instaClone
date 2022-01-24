@@ -5,9 +5,9 @@ import Header from "../../components/Header";
 function signin({ providers }) {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <img src="https://links.papareact.com/ocw" alt="" className=""/>
+        <img src="https://links.papareact.com/ocw" alt="" className="" />
         <p className="font-xs italic">
           This is not a REAL app. Its built for educational purposes only 😄
         </p>
@@ -15,8 +15,8 @@ function signin({ providers }) {
           {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <button
-                onClick={() => signIn(provider.id)}
                 className="p-3 bg-blue-500 rounded-lg text-white"
+                onClick={() => signIn(provider.id, { callbackUrl: "/" })}
               >
                 Sign in with {provider.name}
               </button>

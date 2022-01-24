@@ -1,15 +1,20 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 function Header() {
   const { data: session } = useSession();
+  const router = useRouter();
 
   return (
     <div className="shadow-sm bg-white sticky top-0 z-50">
       <div className="flex justify-between max-w-6xl mx-5 lg:mx-6">
         {/* Left */}
-        <div className="relative hidden lg:inline-grid w-24">
+        <div
+          onClick={() => router.push("/")}
+          className="relative hidden lg:inline-grid w-24"
+        >
           <Image
             src="https://links.papareact.com/ocw"
             layout="fill"
@@ -17,7 +22,10 @@ function Header() {
           />
         </div>
 
-        <div className="relative lg:hidden w-10 cursor-pointer">
+        <div
+          onClick={() => router.push("/")}
+          className="relative lg:hidden w-10 cursor-pointer"
+        >
           <Image
             src="https://links.papareact.com/jjm"
             layout="fill"
@@ -43,7 +51,11 @@ function Header() {
 
         {/* Right */}
         <div className="flex items-center justify-end space-x-4">
-          <Icon icon="heroicons-solid:home" className="navBtn" />
+          <Icon
+            icon="heroicons-solid:home"
+            className="navBtn"
+            onClick={() => router.push("/")}
+          />
           <Icon icon="heroicons-solid:menu" className="w-8 h-8 md:hidden" />
 
           {session ? (
@@ -65,6 +77,7 @@ function Header() {
                 onClick={signOut}
                 src={session?.user?.image}
                 alt="Profile Picture"
+                title="Sign out"
                 className="h-10 cursor-pointer rounded-full"
               />
             </>
