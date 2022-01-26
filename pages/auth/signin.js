@@ -8,14 +8,14 @@ function signin({ providers }) {
       {/* <Header /> */}
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
         <img src="https://links.papareact.com/ocw" alt="" className="" />
-        <p className="font-xs italic">
-          This is not a REAL app. Its built for educational purposes only 😄
+        <p className="font-xs italic text-center px-2">
+          This is not a REAL app. It's built just for fun. Feel free to explore 😄
         </p>
         <div className="mt-40">
           {Object.values(providers).map((provider) => (
             <div key={provider.name}>
               <button
-                className="p-3 bg-blue-500 rounded-lg text-white"
+                className="p-3 bg-red-400 rounded-lg text-white"
                 onClick={() => signIn(provider.id, { callbackUrl: "/" })}
               >
                 Sign in with {provider.name}

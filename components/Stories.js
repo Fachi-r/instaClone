@@ -15,7 +15,7 @@ function Stories() {
   }, []);
 
   return (
-    <div className="flex space-x-2 p-6 bg-white mt-8 border border-gray-200 rounded-sm overflow-x-scroll scrollbar-thin scrollbar-thumb-black">
+    <div className="flex space-x-4 px-5 pt-2 pb-2 md:pb-3 bg-white m-0 md:mt-8 border border-gray-200 rounded-sm overflow-x-scroll scrollbar-hide md:scrollbar-thin md:scrollbar-thumb-black">
       {session && (
         <Story
           key={session.user.username}

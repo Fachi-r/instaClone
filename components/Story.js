@@ -14,9 +14,9 @@ function Story({ username, img }) {
         src={`https://i.pravatar.cc/${seed}`}
         // src={`https://avatars.dicebear.com/api/human/${seed}.svg`}
         alt="Profile Pic"
-        className="h-14 w-14 p-[1.5px] rounded-full border-red-500 border-2 object-contain cursor-pointer hover:scale-110 transition transform duration-200 ease-out"
+        className="h-[4.5rem] w-[4.5rem] p-0.5 rounded-full border-red-500 border-2 object-contain cursor-pointer hover:scale-110 transition transform duration-200 ease-out"
       />
-      <p className="text-xs w-14 truncate text-center">{username}</p>
+      <p className="text-sm w-[4.5rem] pt-1 truncate text-center">{username}</p>
     </div>
   ) : (
     <div>
@@ -24,9 +24,9 @@ function Story({ username, img }) {
         src={img}
         // src={`https://avatars.dicebear.com/api/human/${seed}.svg`}
         alt="Profile Pic"
-        className="h-14 w-14 p-[1.5px] rounded-full border-red-500 border-2 object-contain cursor-pointer hover:scale-110 transition transform duration-200 ease-out"
+        className="h-[4.5rem] w-[4.5rem] p-0.5 rounded-full border-red-500 border-2 object-contain cursor-pointer hover:scale-110 transition transform duration-200 ease-out"
       />
-      <p className="text-xs w-14 truncate text-center">You</p>
+      <p className="text-sm w-[4.5rem] pt-1 truncate text-center">You</p>
     </div>
   );
 }
