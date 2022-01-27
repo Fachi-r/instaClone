@@ -16,12 +16,12 @@ function signin({ providers }) {
         </p>
         <div className="mt-40">
           {Object.values(providers).map((provider) => (
-            <div key={provider.name}>
+            <div key={provider?.name}>
               <button
                 className="p-3 bg-red-400 rounded-lg text-white"
-                onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+                onClick={() => signIn(provider?.id, { callbackUrl: "/" })}
               >
-                Sign in with {provider.name}
+                Sign in with {provider?.name}
               </button>
             </div>
           ))}
