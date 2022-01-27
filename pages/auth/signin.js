@@ -15,7 +15,7 @@ function signin({ providers }) {
           This is not a REAL app. Don't expect too much from it. Feel free to explore 😄
         </p>
         <div className="mt-40">
-          {Object.values(providers).map((provider) => (
+          {Object?.values(providers).map((provider) => (
             <div key={provider?.name}>
               <button
                 className="p-3 bg-red-400 rounded-lg text-white"
