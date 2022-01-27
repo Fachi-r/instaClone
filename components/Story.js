@@ -23,7 +23,7 @@ function Story({ username, img }) {
 
   return !img ? (
     <div>
-      <div className=" rounded-full border-red-500 border-2 hover:scale-110 transition transform duration-200 ease-out">
+      <div className="h-[4.5rem] w-[4.5rem] rounded-full border-red-500 border-2 hover:scale-110 transition transform duration-200 ease-out">
         <div
           className="h-[4.5rem] w-[4.5rem] p-0.5 rounded-full border-white border-2 cursor-pointer "
           style={style}
@@ -40,7 +40,7 @@ function Story({ username, img }) {
     </div>
   ) : (
     <div>
-      <div className=" rounded-full border-red-500 border-2 hover:scale-110 transition transform duration-200 ease-out">
+      <div className="h-[4.5rem] w-[4.5rem] rounded-full border-red-500 border-2 hover:scale-110 transition transform duration-200 ease-out">
         <div
           className="h-[4.5rem] w-[4.5rem] p-0.5 rounded-full border-white border-2 cursor-pointer"
           style={style_user}
