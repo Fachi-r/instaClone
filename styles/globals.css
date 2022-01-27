@@ -42,3 +42,8 @@ outline: 0;
   display: grid;
   place-items: center;
 }
+.story_item{
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 50%;
+}
