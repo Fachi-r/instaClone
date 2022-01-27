@@ -4,10 +4,10 @@ import Modal from "../components/Modal";
 
 export default function Home() {
   return (
-    <div className="bg-white h-screen overflow-y-scroll scrollbar-hide">
+    <div className="bg-white h-screen scrollbar-hide">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Instagram?</title>
+        <link rel="icon" href="https://links.papareact.com/jjm" />
       </Head>
       {/* Header */}
       <Feed />

@@ -22,12 +22,12 @@ function Story({ username, img }) {
   }, []);
 
   return !img ? (
-    <div>
+    <div className="mx-2">
       <div className="story_item border-2 border-red-500 hover:scale-110 transition transform duration-200 ease-out"
       style={style}>
         
         <div
-          className="w-full h-full rounded-full border-2 border-white cursor-pointer "
+          className="w-full h-full rounded-full border-[3px] border-white cursor-pointer hover:scale-110 transition transform duration-200 ease-out -z-10"
         >
           <img
             src={`https://i.pravatar.cc/${seed}`}
@@ -40,10 +40,10 @@ function Story({ username, img }) {
       <p className="text-sm w-[4.5rem] pt-1 truncate text-center">{username}</p>
     </div>
   ) : (
-    <div>
+    <div className="mr-2">
       <div className="story_item border-2 border-red-500 hover:scale-110 transition transform duration-200 ease-out">
         <div
-          className="w-full h-full rounded-full border-2 border-white cursor-pointer"
+          className="w-full h-full rounded-full border-[3px] border-white cursor-pointer hover:scale-105 transition transform duration-200 ease-out"
           style={style_user}
         >
           <img
@@ -54,7 +54,7 @@ function Story({ username, img }) {
           />
         </div>
       </div>
-      <p className="text-sm w-[4.5rem] pt-1 truncate text-center">You</p>
+      <p className="text-sm w-full pt-1 truncate text-center">You</p>
     </div>
   );
 }

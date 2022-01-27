@@ -12,7 +12,7 @@ function Feed() {
         !session && "!grid-cols-1 !max-w-3xl"
       }`}
     >
-      <section className="md:col-span-2">
+      <section className="lg:col-span-2">
         <div>
           <Stories />
           <Posts />

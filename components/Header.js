@@ -4,21 +4,11 @@ import { signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useRecoilState } from "recoil";
 import { modalState } from "../atoms/modalAtom";
-// import Stories from "./Stories";
-// import { useEffect, useState } from "react";
 
 function Header() {
   const { data: session } = useSession();
   const [open, setOpen] = useRecoilState(modalState);
   const router = useRouter();
-  // const [isSignInPage, setIsSignInPage] = useState(true);
-
-  // useEffect(() => {
-  //   const route = router.asPath.split("?");
-  //   if (route[0] !== "/auth/signin") {
-  //     setIsSignInPage(false);
-  //   }
-  // });
 
   return (
     <>
@@ -100,7 +90,7 @@ function Header() {
                 />
               </>
             ) : (
-              <button className='w-20 p-2 !mx-0 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500' onClick={signIn}>Sign In</button>
+              <button className='w-20 p-2 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500' onClick={() => router.push('/auth/signin')}>Sign In</button>
             )}
 
           </div>
