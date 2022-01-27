@@ -21,7 +21,7 @@ function Feed() {
 
       {session && (
         <section>
-          <div className="fixed hidden md:inline-block">
+          <div className="fixed hidden lg:inline-block">
             <MiniProfile />
             <Suggestions />
           </div>
