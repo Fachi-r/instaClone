@@ -21,7 +21,6 @@ function Post({ id, username, userImg, img, caption }) {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [likes, setLikes] = useState([]);
-  const [date, setDate] = useState("");
   const [hasLiked, setHasLiked] = useState(false);
 
   useEffect(
@@ -77,28 +76,6 @@ function Post({ id, username, userImg, img, caption }) {
       username: session.user.username,
     });
   };
-
-  // const getDateFrom = () => {
-  //   moment.relativeTimeThreshold("d", 30 * 12);
-  //   moment.updateLocale("en", {
-  //     relativeTime: {
-  //       past: "%s ",
-  //       s: "sec",
-  //       m: "%d m",
-  //       mm: "%d m",
-  //       h: "%d h",
-  //       hh: "%d h",
-  //       d: "%d d",
-  //       dd: "%d d",
-  //       M: "a mth",
-  //       MM: "%d mths",
-  //       y: "y",
-  //       yy: "%d y",
-  //     },
-  //   });
-  // };
-
-  // console.log(comments[0]?.data());
 
   const TIME_ZONE = (-1 * new Date().getTimezoneOffset()) / 60;
 

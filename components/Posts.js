@@ -1,33 +1,14 @@
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
+import {
+  collection,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import Post from "./Post";
 
-// const posts = [
-//   {
-//     id: "1",
-//     username: "ssssangha",
-//     userImg: "https://links.papareact.com/3ke",
-//     img: "https://links.papareact.com/3ke",
-//     caption: "Subscribe and destroy that like button!",
-//   },
-//   {
-//     id: "2",
-//     username: "fachiiii",
-//     userImg: "https://links.papareact.com/3ke",
-//     img: "https://links.papareact.com/3ke",
-//     caption: "Subscribe and destroy that like button!",
-//   },
-//   {
-//     id: "3",
-//     username: "najamba!!",
-//     userImg: "https://links.papareact.com/3ke",
-//     img: "https://links.papareact.com/3ke",
-//     caption: "Subscribe and destroy that like button!",
-//   },
-// ];
-
-function Posts() {
+function Posts(props) {
   const [posts, setPosts] = useState([]);
 
   useEffect(
@@ -41,15 +22,6 @@ function Posts() {
     [db]
   );
 
-  // useEffect(() => {
-  //   const postsCollection = collection(db, "posts");
-  //   const q = query(postsCollection, orderBy("timestamp", "desc"));
-  //   const unsubscribe = onSnapshot(q, (snapshot) => {
-  //     setPosts(snapshot.docs);
-  //   });
-
-  //   return unsubscribe;
-  // }, []);
   return (
     <div>
       {posts.map((post) => (

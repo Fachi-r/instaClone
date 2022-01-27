@@ -100,7 +100,7 @@ function Header() {
                 />
               </>
             ) : (
-              <button className='w-20 pb-2.5 pt-1.5 !mx-0 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-600' onClick={signIn}>Sign In</button>
+              <button className='w-20 p-2 !mx-0 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500' onClick={signIn}>Sign In</button>
             )}
 
           </div>
