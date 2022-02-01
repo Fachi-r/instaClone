@@ -90,7 +90,7 @@ function Header() {
                 />
               </>
             ) : (
-              <button className='w-20 p-2 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500' onClick={() => router.push('/auth/signin')}>Sign In</button>
+              <button className='w-20 p-2 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500' onClick={signIn}>Sign In</button>
             )}
 
           </div>
