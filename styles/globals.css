@@ -29,6 +29,9 @@ html {
 p {
   font-family: "Quicksand", sans-serif;
 }
+*{
+  overscroll-behavior-y: none;
+}
 .disableSelection {
   -webkit-touch-callout: none;
   -webkit-user-select: none;

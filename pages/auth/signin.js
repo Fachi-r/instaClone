@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 
 // Browser...
 function signin(prov) {
-  const [providers, setProviders] = useState([])
-  useEffect(() => setProviders(prov),[])
-  console.log(providers);
+  const [providers, setProviders] = useState({});
+  useEffect(() => {
+    const p = {...prov.providers};
+    setProviders(p);
+  }, []);
   return (
     <>
       <Head>
@@ -20,17 +22,19 @@ function signin(prov) {
           explore 😄
         </p>
         <div className="mt-40">
-          {/* <code>{}</code> */}
-          {Object.keys(providers).map((provider) => (
-            <div key={provider?.name ?? 1}>
-              <button
-                className="p-3 bg-red-500 rounded-lg text-white"
-                onClick={() => signIn(provider?.id, { callbackUrl: "/" })}
-              >
-                Sign in with {provider?.name}
-              </button>
-            </div>
-          ))}
+          {Object.keys(providers).map((provider, i) => {
+            const p = providers[provider]
+            return (
+              <div key={i}>
+                <button
+                  className="p-3 m-2 bg-red-500 rounded-lg text-white"
+                  onClick={() => signIn(p.id, { callbackUrl: "/" })}
+                >
+                  Sign in with {p.name}
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

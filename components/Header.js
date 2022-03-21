@@ -15,14 +15,12 @@ function Header() {
       <div className="sticky top-0 inset-x-0 shadow-sm bg-white z-50">
         <div className="flex justify-between py-2 max-w-6xl ml-2 mr-5 lg:mx-6">
           {/* Left */}
-          <div
-            onClick={() => router.push("/")}
-            className="relative w-28"
-          >
+          <div onClick={() => router.push("/")} className="relative w-28">
             <Image
               src="https://links.papareact.com/ocw"
               layout="fill"
               objectFit="contain"
+              priority
             />
           </div>
 
@@ -79,8 +77,10 @@ function Header() {
                 />
                 <Icon icon="heroicons-outline:user-group" className="navBtn" />
                 <Icon icon="heroicons-outline:heart" className="navBtn" />
-                
-                <p className='font-bold italic text-gray-500'>{session?.user?.name}</p>
+
+                <p className="font-bold italic text-gray-500">
+                  {session?.user?.name}
+                </p>
                 <img
                   onClick={signOut}
                   src={session?.user?.image}
@@ -90,9 +90,13 @@ function Header() {
                 />
               </>
             ) : (
-              <button className='w-20 p-2 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500' onClick={signIn}>Sign In</button>
+              <button
+                className="w-20 p-2 mt-1 text-white bg-red-500 rounded-lg hover:bg-indigo-500"
+                onClick={signIn}
+              >
+                Sign In
+              </button>
             )}
-
           </div>
         </div>
       </div>

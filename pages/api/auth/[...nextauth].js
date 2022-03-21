@@ -6,20 +6,20 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "../../../mongodb_d";
 
 const options = {
-  adapter: MongoDBAdapter(clientPromise),
+  // adapter: MongoDBAdapter(clientPromise),
   // Configure one or more authentication providers
   providers: [
-    EmailProvider({
-      server: {
-        host: process.env.NEXT_PUBLIC_EMAIL_SERVER_HOST,
-        port: process.env.NEXT_PUBLIC_EMAIL_SERVER_PORT,
-        auth: {
-          user: process.env.NEXT_PUBLIC_EMAIL_SERVER_USER,
-          pass: process.env.NEXT_PUBLIC_EMAIL_SERVER_PASSWORD,
-        },
-      },
-      from: process.env.NEXT_PUBLIC_EMAIL_FROM,
-    }),
+    // EmailProvider({
+    //   server: {
+    //     host: process.env.NEXT_PUBLIC_EMAIL_SERVER_HOST,
+    //     port: process.env.NEXT_PUBLIC_EMAIL_SERVER_PORT,
+    //     auth: {
+    //       user: process.env.NEXT_PUBLIC_EMAIL_SERVER_USER,
+    //       pass: process.env.NEXT_PUBLIC_EMAIL_SERVER_PASSWORD,
+    //     },
+    //   },
+    //   from: process.env.NEXT_PUBLIC_EMAIL_FROM,
+    // }),
     GoogleProvider({
       clientId: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
       clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET,
